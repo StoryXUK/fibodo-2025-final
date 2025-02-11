@@ -567,6 +567,9 @@ figure.caption {
 .space-small-pb {
   padding: 0 0 80px; }
 
+  .space-small-pl {
+    padding: 0 0 0 80px; }
+
 .padding-start {
   padding-left: 130px; }
 
@@ -5331,7 +5334,7 @@ form.fullborder .form-control {
           left: 0;
           font-size: 18px;
           line-height: 30px;
-          font-weight: 500;
+          font-weight: 300;
           padding: 0px;
           color: #000000;
           text-transform: capitalize;
