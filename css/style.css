@@ -68,7 +68,7 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
 *****************************/
 body {
   font-family: "DM Sans", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.7;
   font-size: 17px;
   color: #606060;
@@ -110,7 +110,7 @@ h6,
 .h5,
 .h6 {
   font-family: "Sora", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0px;
   font-style: normal;
   color: #0d1615; }
