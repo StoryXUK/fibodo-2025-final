@@ -5332,7 +5332,8 @@ form.fullborder .form-control {
           position: relative;
           transition: all 0.3s ease-in-out;
           left: 0;
-          font-size: 16px;
+          font-size: 17px;
+          margin-top: 25px;
           line-height: 30px;
           font-weight: 150;
           padding: 0px;
@@ -5943,15 +5944,16 @@ header.header.header-sticky.is-sticky {
       header.header .navbar .navbar-nav > li {
         margin: 0px 5px; }
         header.header .navbar .navbar-nav > li .nav-link {
-          padding: 10px 5px; }
+          padding: 10px 5px; 
+        margin-top: 24px;}
     header.header.header-02 .action-group {
       margin-left: 15px; }
   .action-group {
     gap: 20px; } }
 
 @media (max-width: 1199px) {
-  header.header .action-group .header-phone-number {
-    display: none; }
+  /* header.header .action-group .header-phone-number {
+    display: none; } */
   /* Header */
   .header .main-header {
     padding: 0px 30px; }
@@ -5994,7 +5996,7 @@ header.header.header-sticky.is-sticky {
     flex: 0 0 180px;
     min-width: 180px; }
     .header .navbar .navbar-brand img {
-      height: 50px; }
+      height: 40px; }
   .header .navbar .navbar-nav {
     align-items: initial; }
     .header .navbar .navbar-nav .nav-link {
