@@ -1,8 +1,8 @@
 /*
 
 Template: Fibodo
-Author: potenzaglobalsolutions
-Design and Developed by: potenzaglobalsolutions.com
+Author: fibodo
+Design and Developed by: fibodo.com
 
 NOTE: This file contains all scripts for the actual Template.
 
