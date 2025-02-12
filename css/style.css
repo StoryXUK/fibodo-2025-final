@@ -67,11 +67,11 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
   Typography
 *****************************/
 body {
-  font-family: "DM Sans", sans-serif;
-  font-weight: 300;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
   line-height: 1.7;
-  font-size: 17px;
-  color: #606060;
+  font-size: 16px;
+  color: #434343;
   overflow-x: hidden;
   overflow-y: scroll; }
 
@@ -109,8 +109,8 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Sora", sans-serif;
-  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
   letter-spacing: 0px;
   font-style: normal;
   color: #0d1615; }
@@ -229,7 +229,7 @@ h6 {
     line-height: 30px;
     font-weight: 400;
     text-transform: none;
-    font-family: "DM Sans", sans-serif;
+    font-family: "Poppins", sans-serif;
     color: #ffffff; }
     .breadcrumb .breadcrumb-item a {
       display: flex;
@@ -1447,7 +1447,7 @@ section:has(.rounded-section) {
     line-height: normal;
     font-weight: bold;
     color: #ffffff;
-    font-family: "Sora", sans-serif;
+    font-family: "Poppins", sans-serif;
     margin-bottom: 10px;
     display: block; }
   .action-box .action-box-content p {
@@ -1481,7 +1481,7 @@ section:has(.rounded-section) {
   background-color: #4b9ad6;
   z-index: 2;
   overflow: hidden;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   outline: none; }
   .btn:hover {
     background-color: #0d1615;
@@ -1519,7 +1519,7 @@ section:has(.rounded-section) {
   position: relative;
   z-index: 2;
   overflow: hidden;
-  font-family: "DM Sans", sans-serif; }
+  font-family: "Poppins", sans-serif; }
   .circle-btn span {
     font-size: 18px;
     font-weight: 500;
@@ -1632,7 +1632,7 @@ section:has(.rounded-section) {
   width: 170px;
   padding: 0;
   border-radius: 100%;
-  font-family: "Sora", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   line-height: normal;
   font-weight: 600;
@@ -1727,7 +1727,7 @@ section:has(.rounded-section) {
   font-size: 70px;
   line-height: 75px;
   color: #0d1615;
-  font-family: "Sora", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600; }
 
 .counter.counter-style-02 {
@@ -1791,7 +1791,7 @@ section:has(.rounded-section) {
   .countdown-main .countdown {
     text-align: center; }
     .countdown-main .countdown span {
-      font-family: "DM Sans", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-size: 80px;
       line-height: 100px;
       font-weight: 600;
@@ -1799,7 +1799,7 @@ section:has(.rounded-section) {
       margin-bottom: 0;
       display: block; }
     .countdown-main .countdown p {
-      font-family: "DM Sans", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-size: 20px;
       line-height: 30px;
       font-weight: normal;
@@ -2199,7 +2199,7 @@ form.fullborder .form-control {
   .pgsel-history-slider-wrapper .history-item .history-info .history-year {
     font-size: 40px;
     font-weight: 700;
-    font-family: "Sora", sans-serif;
+    font-family: "Poppins", sans-serif;
     line-height: 50px;
     margin-bottom: 0;
     color: #0d1615; }
@@ -2438,7 +2438,7 @@ form.fullborder .form-control {
         font-size: 26px;
         line-height: 36px;
         font-weight: 600;
-        font-family: "Sora", sans-serif; }
+        font-family: "Poppins", sans-serif; }
       .marquee .marquee-box .marquee-item .icon svg {
         height: 25px;
         width: 25px;
@@ -2460,7 +2460,7 @@ form.fullborder .form-control {
         line-height: 80px;
         color: transparent;
         font-weight: bold;
-        font-family: "Sora", sans-serif;
+        font-family: "Poppins", sans-serif;
         -webkit-text-stroke-width: 1px;
         stroke-width: 1px;
         -webkit-text-stroke-color: #828282;
@@ -2774,7 +2774,7 @@ form.fullborder .form-control {
     transition: all 0.3s ease-in-out;
     overflow: hidden;
     background: #4b9ad6 !important;
-    font-family: "Sora", sans-serif;
+    font-family: "Poppins", sans-serif;
     position: absolute;
     visibility: hidden;
     opacity: 0;
@@ -2877,7 +2877,7 @@ form.fullborder .form-control {
       margin-top: 35px; }
   .pricing-box .pricing-header .title {
     color: #000000;
-    font-family: "Sora", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 32px;
     font-weight: 600;
     line-height: 42px;
@@ -2897,7 +2897,7 @@ form.fullborder .form-control {
     .pricing-box .pricing-price .price-currency {
       font-size: 18px;
       font-weight: 600;
-      font-family: "Sora", sans-serif;
+      font-family: "Poppins", sans-serif;
       line-height: 1;
       align-self: flex-start;
       color: #000000;
@@ -2907,7 +2907,7 @@ form.fullborder .form-control {
       font-weight: 600;
       line-height: .8;
       color: #000000;
-      font-family: "Sora", sans-serif; }
+      font-family: "Poppins", sans-serif; }
     .pricing-box .pricing-price .after-price {
       display: flex;
       flex-wrap: wrap;
@@ -2922,7 +2922,7 @@ form.fullborder .form-control {
         font-weight: 400;
         margin-top: 7px;
         color: #000000;
-        font-family: "Sora", sans-serif;
+        font-family: "Poppins", sans-serif;
         line-height: normal;
         letter-spacing: normal;
         text-transform: none; }
@@ -2936,7 +2936,7 @@ form.fullborder .form-control {
     padding: 0;
     line-height: 1; }
     .pricing-box .pricing-content .package-list li {
-      font-family: "DM Sans", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-size: 17px;
       font-weight: 500;
       line-height: 30px;
@@ -3043,7 +3043,7 @@ form.fullborder .form-control {
             font-size: 24px;
             line-height: normal;
             font-weight: bold;
-            font-family: "Sora", sans-serif;
+            font-family: "Poppins", sans-serif;
             color: #000000;
             display: block; }
           .nav-tabs.pricing-tabs .nav-item .nav-link .nav-link-content .package-name .package-title .package-discount {
@@ -3062,7 +3062,7 @@ form.fullborder .form-control {
               stroke: #ffffff; }
         .nav-tabs.pricing-tabs .nav-item .nav-link .nav-link-content .package-price {
           font-size: 18px;
-          font-family: "Sora", sans-serif;
+          font-family: "Poppins", sans-serif;
           color: #606060;
           font-weight: bold;
           display: flex;
@@ -3073,7 +3073,7 @@ form.fullborder .form-control {
             font-size: 38px;
             line-height: 48px;
             font-weight: bold;
-            font-family: "Sora", sans-serif; }
+            font-family: "Poppins", sans-serif; }
       .nav-tabs.pricing-tabs .nav-item .nav-link.active {
         background-color: #4b9ad6; }
         .nav-tabs.pricing-tabs .nav-item .nav-link.active .nav-link-content .package-name .package-check {
@@ -3841,7 +3841,7 @@ form.fullborder .form-control {
     margin: 0 6px; }
     .social-icon ul li a {
       font-size: 20px;
-      font-family: "DM Sans", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-weight: normal;
       color: #ffffff;
       transition: all 0.3s ease-in-out; }
@@ -3853,7 +3853,7 @@ form.fullborder .form-control {
       margin-right: 0px; }
     .social-icon ul li.title {
       font-size: 20px;
-      font-family: "DM Sans", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-weight: normal;
       color: #ffffff;
       position: relative;
@@ -3921,7 +3921,7 @@ form.fullborder .form-control {
       color: #0d1615;
       font-size: 18px;
       line-height: 1.2;
-      font-family: "DM Sans", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-weight: normal;
       margin-bottom: 0px; }
       .sidebar .widget.recent-posts-widget .recent-posts .post-info .post-title:hover {
@@ -4306,7 +4306,7 @@ form.fullborder .form-control {
         .service-fancy .service-item .service-content .service-action .circle-btn:hover:before {
           background-color: #000000; }
   .service-fancy .service-item .service-title {
-    font-family: "Sora", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 28px;
     font-weight: 600;
     line-height: 40px;
@@ -4356,7 +4356,7 @@ form.fullborder .form-control {
     gap: 30px; }
 
 .services-slider-section .service-fancy .service-item .service-title {
-  font-family: "Sora", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 22px;
   font-weight: 600;
   line-height: 34px;
@@ -4402,7 +4402,7 @@ form.fullborder .form-control {
           color: #4b9ad6; }
       .service-wrapper .sidebar .service-sidebar .action-box .contact-email {
         margin-bottom: 30px;
-        font-family: "Sora", sans-serif;
+        font-family: "Poppins", sans-serif;
         font-size: 18px;
         line-height: 26px; }
         .service-wrapper .sidebar .service-sidebar .action-box .contact-email a {
@@ -4853,7 +4853,7 @@ form.fullborder .form-control {
   font-size: 24px;
   line-height: 32px;
   font-weight: 600;
-  font-family: "Sora", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #4b9ad6;
   margin-bottom: 5px; }
 
@@ -4888,7 +4888,7 @@ form.fullborder .form-control {
       font-size: 38px;
       line-height: normal;
       font-weight: bold;
-      font-family: "Sora", sans-serif;
+      font-family: "Poppins", sans-serif;
       color: #ffffff;
       margin-bottom: 10px; }
     .testimonial-item.testimonial-style-01 .testimonial-author .testimonial-name span {
@@ -5218,7 +5218,7 @@ form.fullborder .form-control {
       line-height: normal;
       font-weight: 600;
       color: #4b9ad6;
-      font-family: "Sora", sans-serif; }
+      font-family: "Poppins", sans-serif; }
   .timeline-item .timeline-info-content {
     position: relative;
     padding-top: 55px;
@@ -5332,9 +5332,9 @@ form.fullborder .form-control {
           position: relative;
           transition: all 0.3s ease-in-out;
           left: 0;
-          font-size: 18px;
+          font-size: 14px;
           line-height: 30px;
-          font-weight: 300;
+          font-weight: 150;
           padding: 0px;
           color: #000000;
           text-transform: capitalize;
@@ -5354,8 +5354,10 @@ form.fullborder .form-control {
         margin-top: 0px;
         margin-bottom: 5px;
         padding: 5px 25px;
-        font-size: 18px;
-        color: #0d1615; }
+        text-transform: capitalize;
+        font-size: 15px;
+        color: #3d3e40; }
+        
     .header .navbar .dropdown-menu {
       padding: 20px 0px;
       z-index: 999; }
@@ -5581,17 +5583,18 @@ header.header.header-sticky.is-sticky {
   position: relative; }
 
 .navbar .dropdown > .dropdown-menu li > a {
-  font-size: 17px;
-  line-height: 30px;
-  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
   padding: 5px 25px 5px 25px;
   border-radius: 0px;
   position: relative;
   color: #000000;
-  font-family: "DM Sans", sans-serif; }
+  font-family: "Poppins", sans-serif; }
   .navbar .dropdown > .dropdown-menu li > a:hover {
     color: #4b9ad6;
-    padding-left: 35px; }
+    /* padding-left: 35px;  */
+  }
     .navbar .dropdown > .dropdown-menu li > a:hover span:before {
       width: 100%; }
 
@@ -5603,16 +5606,17 @@ header.header.header-sticky.is-sticky {
 
     .navbar .dropdown > .dropdown-menu li > p {
       font-size: 12px;
-      line-height: 30px;
-      font-weight: 300;
+      line-height: 20px;
+      font-weight: 200;
       padding: 5px 25px 5px 25px;
       border-radius: 0px;
       position: relative;
       color: #000000;
-      font-family: "DM Sans", sans-serif; }
+      font-family: "Poppins", sans-serif; }
       .navbar .dropdown > .dropdown-menu li > p:hover {
-        color: #4b9ad6;
-        padding-left: 35px; }
+        /* color: #4b9ad6; */
+        /* padding-left: 35px;  */
+      }
         .navbar .dropdown > .dropdown-menu li > p:hover span:before {
           width: 100%; }
     
@@ -5711,7 +5715,7 @@ header.header.header-sticky.is-sticky {
       font-size: 17px;
       line-height: normal;
       color: #606060;
-      font-family: "DM Sans", sans-serif;
+      font-family: "Poppins", sans-serif;
       font-weight: normal; }
       .offcanvas .offcanvas-body .contact-info-box a:hover {
         color: #4b9ad6; }
@@ -5812,15 +5816,15 @@ header.header.header-sticky.is-sticky {
           .main-menu-offcanvas .offcanvas-body .navbar .navbar-nav .nav-item a {
             display: block;
             padding: 0;
-            font-size: 18px;
-            font-weight: 500;
+            font-size: 14px;
+            font-weight: 200;
             color: #0d1615; }
             .main-menu-offcanvas .offcanvas-body .navbar .navbar-nav .nav-item a.dropdown-toggle:before {
               position: absolute;
               content: "\f078";
-              font-family: 'Font Awesome 6 Free';
+              font-family: 'Poppins';
               font-size: 0.8rem !important;
-              font-weight: 900;
+              font-weight: 400;
               color: #0d1615;
               height: 27px;
               width: 27px;
@@ -5841,8 +5845,8 @@ header.header.header-sticky.is-sticky {
             background: transparent; }
             .main-menu-offcanvas .offcanvas-body .navbar .navbar-nav .nav-item .dropdown-menu li a {
               padding: 8px 0;
-              font-size: 18px;
-              font-weight: 400;
+              font-size: 14px;
+              font-weight: 200;
               color: #0d1615; }
               .main-menu-offcanvas .offcanvas-body .navbar .navbar-nav .nav-item .dropdown-menu li a.active, .main-menu-offcanvas .offcanvas-body .navbar .navbar-nav .nav-item .dropdown-menu li a:hover {
                 color: #4b9ad6;
@@ -5854,7 +5858,7 @@ header.header.header-sticky.is-sticky {
     border-top: 3px solid #4b9ad6; }
     .main-menu-offcanvas .contact-info .number {
       display: block;
-      font-size: 30px;
+      font-size: 20px;
       line-height: 36px;
       font-weight: 700;
       color: #ffffff;
@@ -5862,7 +5866,7 @@ header.header.header-sticky.is-sticky {
     .main-menu-offcanvas .contact-info .mail {
       display: block;
       color: #606060;
-      font-size: 24px;
+      font-size: 20px;
       margin-bottom: 15px; }
       .main-menu-offcanvas .contact-info .mail i {
         padding-right: 10px;
@@ -5878,7 +5882,7 @@ header.header.header-sticky.is-sticky {
     flex-basis: 100%; }
   .header .navbar .dropdown-menu {
     margin: 0px;
-    font-size: 14px;
+    font-size: 12px;
     border-radius: 5px;
     min-width: 250px;
     border: none;
@@ -5956,10 +5960,10 @@ header.header.header-sticky.is-sticky {
   .header .navbar .navbar-nav > li {
     margin: 0px 10px; }
     .header .navbar .navbar-nav > li .nav-link {
-      font-size: 18px; }
+      font-size: 14px; }
   .header .navbar .action-group a.btn {
     margin-left: 20px !important;
-    font-size: 14px; }
+    font-size: 16px; }
   .header .navbar .action-group .menu-btn {
     margin-left: 20px; }
   .header.default .main-header {
@@ -6004,17 +6008,16 @@ header.header.header-sticky.is-sticky {
       margin-left: 0px; }
   .header .navbar .dropdown-menu {
     margin: 0px;
-    font-size: 16px;
+    font-size: 12px;
     border-radius: 0px;
     border: none;
     -webkit-box-shadow: none;
     box-shadow: none;
     background: inherit;
-    padding: 0;
-    font-size: 13px; }
+    padding: 0; }
   .header .navbar .nav-title {
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 14px;
     margin-bottom: 10px !important; }
   .header .navbar .navbar-toggler {
     position: absolute;
@@ -6415,14 +6418,14 @@ header.header.header-sticky.is-sticky {
     .section-title .subtitle.bg-dark {
       color: #ffffff; }
   .section-title h3.title {
-    font-family: "Sora", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 34px;
     font-weight: 600;
     line-height: 46px; }
   .section-title .title {
-    font-family: "Sora", sans-serif;
-    font-size: 50px;
-    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    font-size: 42px;
+    font-weight: 500;
     line-height: 60px;
     margin-bottom: 0;
     color: #0d1615; }
@@ -6678,7 +6681,7 @@ body:has(#search.open) {
   width: 170px;
   padding: 0;
   border-radius: 100%;
-  font-family: "Sora", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   line-height: normal;
   font-weight: 600;
@@ -7047,7 +7050,7 @@ body:has(#search.open) {
 .error-content .error-title {
   font-size: 220px;
   line-height: 1;
-  font-family: "Sora", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   color: #000000;
   display: block;
@@ -8061,3 +8064,10 @@ body:has(#search.open) {
             flex: 0 0 100%; } }
 
 .center-title {margin: auto;}
+
+/* ////////////// */
+
+.underline {border-bottom: 1px solid #b6b7b8;
+  margin-bottom: 25px;
+  margin-left: 25px;
+  margin-right: 25px;}
