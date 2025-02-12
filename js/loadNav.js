@@ -22,4 +22,6 @@ function loadContent(elementId, file) {
   document.addEventListener("DOMContentLoaded", function () {
     loadContent("navbar", "nav.html"); // Load the navigation
     loadContent("footer", "footer.html"); // Load the footer
+    loadContent("pricing", "pricing.html"); // Load the pricing
+    loadContent("core-features", "core-features.html"); // Load the features
   });
