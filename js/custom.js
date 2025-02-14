@@ -628,3 +628,53 @@ POTENZA.searchbar = function () {
     POTENZA.mouseCursor();
   });
 })(jQuery);
+
+
+
+
+// features
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuItems = document.querySelectorAll(".menu-widget-items a");
+  const sections = document.querySelectorAll(".service-single");
+
+  // Hide all sections except the first one
+  sections.forEach((section, index) => {
+    if (index !== 0) {
+      section.style.display = "none";
+    }
+  });
+
+  menuItems.forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      // Get the target section ID
+      let targetId = this.getAttribute("href").substring(1);
+      let targetSection = document.getElementById(targetId);
+
+      if (targetSection) {
+        // Hide all sections
+        sections.forEach(section => {
+          section.style.display = "none";
+        });
+
+        // Show the target section
+        targetSection.style.display = "block";
+
+        // Update active class
+        document.querySelectorAll(".menu-item").forEach(item => item.classList.remove("is-active"));
+        this.parentElement.classList.add("is-active");
+
+        // Smooth scroll to the top of the section
+        window.scrollTo({
+          top: targetSection.offsetTop - 100, // Adjust for header height
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+});
+
