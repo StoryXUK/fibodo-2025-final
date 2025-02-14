@@ -109,6 +109,31 @@
             <!--=================================
         banner -->
 
+        <script src='https://cdn.jotfor.ms/s/umd/latest/for-embedded-agent.js'></script>
+<script>
+  window.addEventListener("DOMContentLoaded", function() {
+    window.AgentInitializer.init({
+      agentRenderURL: "https://eu.jotform.com/agent/0195047a4e9a7c83898e9449e346432dbfd1",
+      rootId: "JotformAgent-0195047a4e9a7c83898e9449e346432dbfd1",
+      formID: "0195047a4e9a7c83898e9449e346432dbfd1",
+      queryParams: ["skipWelcome=1", "maximizable=1"],
+      domain: "https://eu.jotform.com",
+      isDraggable: false,
+      background: "linear-gradient(180deg, #C8CEED 0%, #C8CEED 100%)",
+      buttonBackgroundColor: "#0a1551",
+      buttonIconColor: "#fff",
+      variant: false,
+      customizations: {
+        "greeting": "Yes",
+        "greetingMessage": "Hi! How can I assist you?",
+        "pulse": "Yes",
+        "position": "right"
+      },
+      isVoice: false
+    });
+  });
+</script>
+
             <!--=================================
           Countdown Large -->
             <!-- <section class="space-ptb">
@@ -1708,6 +1733,8 @@
     </div>
     <!--=================================
     Back To Top -->
+    
+    
     <!--=================================
     Javascript -->
     <!-- JS Global Compulsory (Do not remove)-->
