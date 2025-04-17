@@ -617,14 +617,14 @@ section:has(.rounded-section) {
   pointer-events: none; }
 
 @media (hover: hover) and (pointer: fine) {
-  .cursor__circle {
+  /* .cursor__circle {
     width: 40px;
     height: 40px;
     margin-top: -50%;
     margin-left: -50%;
     border-radius: 50%;
     border: 1px solid #0d1615;
-    transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1), width 0.3s cubic-bezier(0.25, 1, 0.5, 1), height 0.3s cubic-bezier(0.25, 1, 0.5, 1); }
+    transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1), width 0.3s cubic-bezier(0.25, 1, 0.5, 1), height 0.3s cubic-bezier(0.25, 1, 0.5, 1); } */
   /* Cursor Text */
   #cursor.text .cursor__circle,
   #cursor.arrow .cursor__circle,
