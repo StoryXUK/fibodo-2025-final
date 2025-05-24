@@ -5356,7 +5356,7 @@ form.fullborder .form-control {
         margin-bottom: 5px;
         padding: 5px 25px;
         text-transform: capitalize;
-        font-size: 15px;
+        font-size: 13px;
         color: #3d3e40; }
         
     .header .navbar .dropdown-menu {
@@ -6019,7 +6019,7 @@ header.header.header-sticky.is-sticky {
     padding: 0; }
   .header .navbar .nav-title {
     margin-top: 20px;
-    font-size: 14px;
+    font-size: 12px;
     margin-bottom: 10px !important; }
   .header .navbar .navbar-toggler {
     position: absolute;
