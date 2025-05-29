@@ -11572,6 +11572,22 @@ body:has(#search.open):before {
 
 
 .sub-title-white {
-  font-size: 18px;
+  font-size: 22px !important;
   color: white !important;
+}
+
+@media (max-width: 767px) {
+  .sub-title-white {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .reverse-on-mobile {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .title-responsive {
+    padding-top: 60px;
+  }
 }
