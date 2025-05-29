@@ -11569,3 +11569,9 @@ body:has(#search.open):before {
   margin: auto;
   text-align: center;
 }
+
+
+.sub-title-white {
+  font-size: 18px;
+  color: white !important;
+}
