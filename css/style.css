@@ -67,7 +67,7 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
   Typography
 *****************************/
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-weight: 200;
   line-height: 1.7;
   font-size: 16px;
@@ -118,7 +118,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-weight: 400;
   letter-spacing: 0px;
   font-style: normal;
@@ -260,7 +260,7 @@ h6 {
   line-height: 30px;
   font-weight: 400;
   text-transform: none;
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   color: #ffffff;
 }
 
@@ -1931,7 +1931,7 @@ section:has(.rounded-section) {
   line-height: normal;
   font-weight: bold;
   color: #ffffff;
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   margin-bottom: 10px;
   display: block;
 }
@@ -1976,7 +1976,7 @@ section:has(.rounded-section) {
   background-color: #4b9ad6;
   z-index: 2;
   overflow: hidden;
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   outline: none;
 }
 
@@ -2029,7 +2029,7 @@ section:has(.rounded-section) {
   position: relative;
   z-index: 2;
   overflow: hidden;
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
 .circle-btn span {
@@ -2207,7 +2207,7 @@ section:has(.rounded-section) {
   width: 170px;
   padding: 0;
   border-radius: 100%;
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 18px;
   line-height: normal;
   font-weight: 600;
@@ -2339,7 +2339,7 @@ section:has(.rounded-section) {
   font-size: 70px;
   line-height: 75px;
   color: #0d1615;
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-weight: 600;
 }
 
@@ -2436,7 +2436,7 @@ section:has(.rounded-section) {
 }
 
 .countdown-main .countdown span {
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 80px;
   line-height: 100px;
   font-weight: 600;
@@ -2446,7 +2446,7 @@ section:has(.rounded-section) {
 }
 
 .countdown-main .countdown p {
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 20px;
   line-height: 30px;
   font-weight: normal;
@@ -3016,7 +3016,7 @@ form.fullborder .form-control:focus {
 .pgsel-history-slider-wrapper .history-item .history-info .history-year {
   font-size: 40px;
   font-weight: 700;
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   line-height: 50px;
   margin-bottom: 0;
   color: #0d1615;
@@ -3339,7 +3339,7 @@ form.fullborder .form-control:focus {
   font-size: 26px;
   line-height: 36px;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
 .marquee .marquee-box .marquee-item .icon svg {
@@ -3373,7 +3373,7 @@ form.fullborder .form-control:focus {
   line-height: 80px;
   color: transparent;
   font-weight: bold;
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   -webkit-text-stroke-width: 1px;
   stroke-width: 1px;
   -webkit-text-stroke-color: #828282;
@@ -3838,7 +3838,7 @@ form.fullborder .form-control:focus {
   transition: all 0.3s ease-in-out;
   overflow: hidden;
   background: #4b9ad6 !important;
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   position: absolute;
   visibility: hidden;
   opacity: 0;
@@ -3973,7 +3973,7 @@ form.fullborder .form-control:focus {
 
 .pricing-box .pricing-header .title {
   color: #000000;
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 32px;
   font-weight: 600;
   line-height: 42px;
@@ -3999,7 +3999,7 @@ form.fullborder .form-control:focus {
 .pricing-box .pricing-price .price-currency {
   font-size: 18px;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   line-height: 1;
   align-self: flex-start;
   color: #000000;
@@ -4011,7 +4011,7 @@ form.fullborder .form-control:focus {
   font-weight: 600;
   line-height: .8;
   color: #000000;
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
 .pricing-box .pricing-price .after-price {
@@ -4030,7 +4030,7 @@ form.fullborder .form-control:focus {
   font-weight: 400;
   margin-top: 7px;
   color: #000000;
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   line-height: normal;
   letter-spacing: normal;
   text-transform: none;
@@ -4050,7 +4050,7 @@ form.fullborder .form-control:focus {
 }
 
 .pricing-box .pricing-content .package-list li {
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 17px;
   font-weight: 500;
   line-height: 30px;
@@ -4209,7 +4209,7 @@ form.fullborder .form-control:focus {
   font-size: 24px;
   line-height: normal;
   font-weight: bold;
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   color: #000000;
   display: block;
 }
@@ -4238,7 +4238,7 @@ form.fullborder .form-control:focus {
 
 .nav-tabs.pricing-tabs .nav-item .nav-link .nav-link-content .package-price {
   font-size: 18px;
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   color: #606060;
   font-weight: bold;
   display: flex;
@@ -4251,7 +4251,7 @@ form.fullborder .form-control:focus {
   font-size: 38px;
   line-height: 48px;
   font-weight: bold;
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
 .nav-tabs.pricing-tabs .nav-item .nav-link.active {
@@ -5328,7 +5328,7 @@ form.fullborder .form-control:focus {
 
 .social-icon ul li a {
   font-size: 20px;
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-weight: normal;
   color: #ffffff;
   transition: all 0.3s ease-in-out;
@@ -5348,7 +5348,7 @@ form.fullborder .form-control:focus {
 
 .social-icon ul li.title {
   font-size: 20px;
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-weight: normal;
   color: #ffffff;
   position: relative;
@@ -5442,7 +5442,7 @@ form.fullborder .form-control:focus {
   color: #0d1615;
   font-size: 18px;
   line-height: 1.2;
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-weight: normal;
   margin-bottom: 0px;
 }
@@ -5997,7 +5997,7 @@ form.fullborder .form-control:focus {
 }
 
 .service-fancy .service-item .service-title {
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 28px;
   font-weight: 600;
   line-height: 40px;
@@ -6079,7 +6079,7 @@ form.fullborder .form-control:focus {
 }
 
 .services-slider-section .service-fancy .service-item .service-title {
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 22px;
   font-weight: 600;
   line-height: 34px;
@@ -6140,7 +6140,7 @@ form.fullborder .form-control:focus {
 
 .service-wrapper .sidebar .service-sidebar .action-box .contact-email {
   margin-bottom: 30px;
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 18px;
   line-height: 26px;
 }
@@ -6824,7 +6824,7 @@ form.fullborder .form-control:focus {
   font-size: 24px;
   line-height: 32px;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   color: #4b9ad6;
   margin-bottom: 5px;
 }
@@ -6873,7 +6873,7 @@ form.fullborder .form-control:focus {
   font-size: 38px;
   line-height: normal;
   font-weight: bold;
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   color: #ffffff;
   margin-bottom: 10px;
 }
@@ -7367,7 +7367,7 @@ form.fullborder .form-control:focus {
   line-height: normal;
   font-weight: 600;
   color: #4b9ad6;
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
 .timeline-item .timeline-info-content {
@@ -7893,7 +7893,7 @@ header.header.header-sticky.is-sticky.header-02 .navbar .navbar-brand img.sticky
   border-radius: 0px;
   position: relative;
   color: #000000;
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
 .navbar .dropdown>.dropdown-menu li>a:hover {
@@ -7922,7 +7922,7 @@ header.header.header-sticky.is-sticky.header-02 .navbar .navbar-brand img.sticky
   border-radius: 0px;
   position: relative;
   color: #000000;
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
 .navbar .dropdown>.dropdown-menu li>p:hover {
@@ -8065,7 +8065,7 @@ header.header.header-sticky.is-sticky.header-02 .navbar .navbar-brand img.sticky
   font-size: 17px;
   line-height: normal;
   color: #606060;
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-weight: normal;
 }
 
@@ -8228,7 +8228,7 @@ header.header.header-sticky.is-sticky.header-02 .navbar .navbar-brand img.sticky
 .main-menu-offcanvas .offcanvas-body .navbar .navbar-nav .nav-item a.dropdown-toggle:before {
   position: absolute;
   content: "\f078";
-  font-family: 'Poppins';
+  font-family: 'DM Sans';
   font-size: 0.8rem !important;
   font-weight: 400;
   color: #0d1615;
@@ -9152,14 +9152,14 @@ header.header.header-sticky.is-sticky.header-02 .navbar .navbar-brand img.sticky
 }
 
 .section-title h3.title {
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 34px;
   font-weight: 600;
   line-height: 46px;
 }
 
 .section-title .title {
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 42px;
   font-weight: 500;
   line-height: 60px;
@@ -9488,7 +9488,7 @@ body:has(#search.open):before {
   width: 170px;
   padding: 0;
   border-radius: 100%;
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 18px;
   line-height: normal;
   font-weight: 600;
@@ -9983,7 +9983,7 @@ body:has(#search.open):before {
 .error-content .error-title {
   font-size: 220px;
   line-height: 1;
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-weight: 600;
   color: #000000;
   display: block;
