@@ -7530,10 +7530,10 @@ form.fullborder .form-control:focus {
   position: relative;
   transition: all 0.3s ease-in-out;
   left: 0;
-  font-size: 17px;
+  font-size: 20px;
   margin-top: 25px;
   line-height: 30px;
-  font-weight: 150;
+  font-weight: 250;
   padding: 0px;
   color: #000000;
   text-transform: capitalize;
@@ -7603,9 +7603,18 @@ form.fullborder .form-control:focus {
   border: #000000;
 }
 
+.header .menu-btn2 a {
+  color: white;
+}
+
+.header .menu-btn2 a:hover {
+  color: black;
+}
+
 .header .menu-btn2:hover {
   background-color: #fff;
-  color: #000; /* optional: change text to black on white background */
+  color: #000;
+  /* optional: change text to black on white background */
   border: 1px solid #000000;
 }
 
@@ -7656,13 +7665,22 @@ form.fullborder .form-control:focus {
 }
 
 .header .action-group .header-phone-number {
-   padding: 8px 25px;
-  
+  padding: 8px 25px;
   margin-left: 10px !important;
-  border: 1px solid #000000; /* blue border */
+  border: 1px solid #000000;
+  /* blue border */
   font-size: 24px;
   line-height: 30px;
   height: 65px;
+}
+
+.header .action-group .header-phone-number:hover {
+  background-color: #000;
+  color: white;
+}
+
+.header .action-group .header-phone-number a:hover {
+  color: white;
 }
 
 /*Hamburger*/
@@ -8324,6 +8342,15 @@ header.header.header-sticky.is-sticky.header-02 .navbar .navbar-brand img.sticky
   Responsive
 *****************************/
 @media (min-width: 992px) {
+
+  .header-phone-number {
+    display: none;
+  }
+
+  .menu-btn2 {
+    display: none;
+  }
+
   .navbar-nav .mega-menu {
     position: static;
   }
@@ -11609,6 +11636,7 @@ body:has(#search.open):before {
     display: flex;
     flex-direction: column-reverse;
   }
+
   .title-responsive {
     padding-top: 60px;
   }
@@ -11616,33 +11644,51 @@ body:has(#search.open):before {
 
 
 .with-border {
-  border-right: 1px solid #ccc; /* Adjust color and thickness as needed */
-  
-  height: 100%; /* Ensures full height if inside a flex or grid */
+  border-right: 1px solid #ccc;
+  /* Adjust color and thickness as needed */
+
+  height: 100%;
+  /* Ensures full height if inside a flex or grid */
 }
 
 .move-up {
   margin-top: -200px;
 }
 
-.feature-subtitle{
+.feature-subtitle {
   font-size: 24px;
   color: white;
 }
 
 .top-bar {
-  background-color: #666666; /* mid grey */
-  font-size: 18px;
+  background-color: #333537;
+  /* mid grey */
+  font-size: 20px;
   font-weight: 400;
   height: 50px;
   display: flex;
-  align-items: center; /* vertical centering */
-  justify-content: flex-end; /* align text to the right */
-  padding-right: 100px; /* spacing from the edge */
+  align-items: center;
+  /* vertical centering */
+  justify-content: flex-end;
+  /* align text to the right */
+  padding-right: 100px;
+  /* spacing from the edge */
   color: white;
 }
 
-.top-bar-text .a{
-  margin-right: 45px;
-  color: white;
+.top-bar-text .a {
+  margin-right: 30px;
+  color: white !important;
+
+}
+
+.top-bar .top-bar-text,
+.top-bar .top-bar-text a {
+  color: white !important;
+}
+
+@media (max-width: 992px) {
+  .top-bar {
+    display: none;
+  }
 }
