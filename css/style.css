@@ -8879,7 +8879,7 @@ header.header.header-sticky.is-sticky.header-02 .navbar .navbar-brand img.sticky
 .inner-header {
   position: relative;
   z-index: 5;
-  height: 450px;
+  height: 650px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11619,4 +11619,30 @@ body:has(#search.open):before {
   border-right: 1px solid #ccc; /* Adjust color and thickness as needed */
   
   height: 100%; /* Ensures full height if inside a flex or grid */
+}
+
+.move-up {
+  margin-top: -200px;
+}
+
+.feature-subtitle{
+  font-size: 24px;
+  color: white;
+}
+
+.top-bar {
+  background-color: #666666; /* mid grey */
+  font-size: 18px;
+  font-weight: 400;
+  height: 50px;
+  display: flex;
+  align-items: center; /* vertical centering */
+  justify-content: flex-end; /* align text to the right */
+  padding-right: 100px; /* spacing from the edge */
+  color: white;
+}
+
+.top-bar-text .a{
+  margin-right: 45px;
+  color: white;
 }
