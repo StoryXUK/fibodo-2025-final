@@ -678,3 +678,40 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+
+ document.addEventListener('DOMContentLoaded', function () {
+    const tabs = document.querySelectorAll('.radio-switch .nav-link');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+    let currentIndex = 0;
+
+    if (!tabs.length) return;
+
+    // Set initial active state (just in case)
+    activateTab(currentIndex);
+
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % tabs.length;
+      activateTab(currentIndex);
+    }, 3000); // Change every 5 seconds
+
+    function activateTab(index) {
+      tabs.forEach((tab, i) => {
+        const isActive = i === index;
+        tab.classList.toggle('active', isActive);
+        tab.setAttribute('aria-selected', isActive);
+        if (isActive) {
+          tab.classList.add('show');
+        } else {
+          tab.classList.remove('show');
+        }
+
+        const targetId = tab.getAttribute('data-bs-target');
+        const pane = document.querySelector(targetId);
+        if (pane) {
+          pane.classList.toggle('active', isActive);
+          pane.classList.toggle('show', isActive);
+        }
+      });
+    }
+  });

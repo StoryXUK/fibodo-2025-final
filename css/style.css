@@ -7588,6 +7588,27 @@ form.fullborder .form-control:focus {
   border-radius: 50px;
 }
 
+.header .menu-btn2 {
+  width: 200px;
+  font-size: 24px;
+  height: 65px;
+  display: flex;
+  margin-left: 15px;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  color: white !important;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: #000000;
+}
+
+.header .menu-btn2:hover {
+  background-color: #fff;
+  color: #000; /* optional: change text to black on white background */
+  border: 1px solid #000000;
+}
+
 .header .menu-btn svg rect {
   fill: #000000;
   transition: all 0.3s ease-in-out;
@@ -7634,13 +7655,14 @@ form.fullborder .form-control:focus {
   margin-left: 30px;
 }
 
-.header.header-02 .action-group .header-phone-number {
-  padding: 8px 25px;
-  border-radius: 50px;
+.header .action-group .header-phone-number {
+   padding: 8px 25px;
+  
   margin-left: 10px !important;
-  border: 1px solid #4b9ad6;
-  font-size: 20px;
+  border: 1px solid #000000; /* blue border */
+  font-size: 24px;
   line-height: 30px;
+  height: 65px;
 }
 
 /*Hamburger*/
@@ -7823,7 +7845,7 @@ header.header.header-sticky.is-sticky.sticky-show {
 }
 
 header.header.header-sticky.is-sticky .navbar .navbar-brand img {
-  height: 45px;
+  height: 60px;
 }
 
 header.header.header-sticky.is-sticky .navbar .navbar-brand img.sticky {
@@ -11590,4 +11612,11 @@ body:has(#search.open):before {
   .title-responsive {
     padding-top: 60px;
   }
+}
+
+
+.with-border {
+  border-right: 1px solid #ccc; /* Adjust color and thickness as needed */
+  
+  height: 100%; /* Ensures full height if inside a flex or grid */
 }
