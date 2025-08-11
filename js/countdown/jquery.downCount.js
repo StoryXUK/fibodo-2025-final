@@ -90,7 +90,7 @@
 // Initialize the countdown on page ready
 $(document).ready(function () {
     $('.countdown-main').downCount({
-        date: '2025-07-01T00:00:00',
+        date: '2025-09-04T00:00:00',
         offset: 1 // UK local time (BST in summer)
     });
 });
