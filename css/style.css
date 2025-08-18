@@ -7496,7 +7496,7 @@ form.fullborder .form-control:focus {
 }
 
 .header .navbar-brand img {
-  height: 50px;
+  height: 80px;
 }
 
 .header .navbar-brand img.sticky {
@@ -7530,7 +7530,7 @@ form.fullborder .form-control:focus {
   position: relative;
   transition: all 0.3s ease-in-out;
   left: 0;
-  font-size: 20px;
+  font-size: 18px;
   margin-top: 25px;
   line-height: 30px;
   font-weight: 250;
