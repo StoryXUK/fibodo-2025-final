@@ -681,37 +681,58 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
  document.addEventListener('DOMContentLoaded', function () {
-    const tabs = document.querySelectorAll('.radio-switch .nav-link');
-    const tabPanes = document.querySelectorAll('.tab-pane');
-    let currentIndex = 0;
+  const tabs = document.querySelectorAll('.radio-switch .nav-link');
+  if (!tabs.length) return;
 
-    if (!tabs.length) return;
+  let currentIndex = 0;
+  let rotationId = null;
 
-    // Set initial active state (just in case)
-    activateTab(currentIndex);
+  activateTab(currentIndex);
+  startRotation();
 
-    setInterval(() => {
+  // parent section wrapper
+  const section = document.querySelector('.switch-content-tabs');
+  if (section) {
+    section.addEventListener('mouseenter', stopRotation);
+    section.addEventListener('mouseleave', startRotation);
+  }
+
+  // if a user clicks a tab, jump to it immediately
+  tabs.forEach((tab, i) => {
+    tab.addEventListener('click', () => {
+      currentIndex = i;
+      activateTab(currentIndex);
+    });
+  });
+
+  function startRotation() {
+    stopRotation(); // clear any existing interval
+    rotationId = setInterval(() => {
       currentIndex = (currentIndex + 1) % tabs.length;
       activateTab(currentIndex);
-    }, 3000); // Change every 5 seconds
+    }, 3000); // 3 seconds
+  }
 
-    function activateTab(index) {
-      tabs.forEach((tab, i) => {
-        const isActive = i === index;
-        tab.classList.toggle('active', isActive);
-        tab.setAttribute('aria-selected', isActive);
-        if (isActive) {
-          tab.classList.add('show');
-        } else {
-          tab.classList.remove('show');
-        }
-
-        const targetId = tab.getAttribute('data-bs-target');
-        const pane = document.querySelector(targetId);
-        if (pane) {
-          pane.classList.toggle('active', isActive);
-          pane.classList.toggle('show', isActive);
-        }
-      });
+  function stopRotation() {
+    if (rotationId) {
+      clearInterval(rotationId);
+      rotationId = null;
     }
-  });
+  }
+
+  function activateTab(index) {
+    tabs.forEach((tab, i) => {
+      const isActive = i === index;
+      tab.classList.toggle('active', isActive);
+      tab.setAttribute('aria-selected', isActive);
+      tab.classList.toggle('show', isActive);
+
+      const targetId = tab.getAttribute('data-bs-target');
+      const pane = document.querySelector(targetId);
+      if (pane) {
+        pane.classList.toggle('active', isActive);
+        pane.classList.toggle('show', isActive);
+      }
+    });
+  }
+});
