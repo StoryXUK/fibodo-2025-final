@@ -700,43 +700,43 @@ figure.caption.alignright {
 
 /* Page section margin padding */
 .space-ptb {
-  padding: 130px 0;
+  padding: 80px 0 100px 0;
 }
 
 .space-pt {
-  padding: 130px 0 0;
+  padding: 100px 0 0;
 }
 
 .space-pb {
-  padding: 0 0 130px;
+  padding: 0 0 100px;
 }
 
 .space-medium-ptb {
-  padding: 115px 0;
-}
-
-.space-medium-pt {
-  padding: 115px 0 0;
-}
-
-.space-medium-pb {
-  padding: 0 0 115px;
-}
-
-.space-small-ptb {
   padding: 80px 0;
 }
 
-.space-small-pt {
+.space-medium-pt {
   padding: 80px 0 0;
 }
 
-.space-small-pb {
+.space-medium-pb {
   padding: 0 0 80px;
 }
 
+.space-small-ptb {
+  padding: 60px 0;
+}
+
+.space-small-pt {
+  padding: 60px 0 0;
+}
+
+.space-small-pb {
+  padding: 0 0 60px;
+}
+
 .space-small-pl {
-  padding: 0 0 0 80px;
+  padding: 0 0 0 60px;
 }
 
 .padding-start {
@@ -8710,7 +8710,7 @@ header.header.header-sticky.is-sticky.header-02 .navbar .navbar-brand img.sticky
 }
 
 .banner.banner-01 .banner-content .title {
-  font-size: 80px;
+  font-size: 60px;
   font-weight: 700;
   line-height: 1.3em;
   margin-bottom: 0px;
@@ -8723,7 +8723,7 @@ header.header.header-sticky.is-sticky.header-02 .navbar .navbar-brand img.sticky
 }
 
 .banner.banner-01 .banner-content .title.title-main {
-  margin-left: -5%;
+  margin: auto;
 }
 
 .banner.banner-01 .banner-content .banner-info {
@@ -8731,7 +8731,7 @@ header.header.header-sticky.is-sticky.header-02 .navbar .navbar-brand img.sticky
 }
 
 .banner.banner-01 .banner-content .banner-info .banner-description {
-  font-size: 18px;
+  font-size: 28px;
   font-weight: 400;
   line-height: 34px;
 }
@@ -8944,7 +8944,7 @@ header.header.header-sticky.is-sticky.header-02 .navbar .navbar-brand img.sticky
 
 @media (max-width: 1399px) {
   .banner.banner-01 .banner-content .title.title-main {
-    margin-left: 0;
+    margin: auto;
   }
 
   .banner.banner-01 .banner-content .banner-info {
@@ -8962,7 +8962,7 @@ header.header.header-sticky.is-sticky.header-02 .navbar .navbar-brand img.sticky
   }
 
   .banner.banner-01 .banner-content .title {
-    font-size: 80px;
+    font-size: 60px;
   }
 
   .banner.banner-01 .banner-content .title span {
@@ -8988,11 +8988,11 @@ header.header.header-sticky.is-sticky.header-02 .navbar .navbar-brand img.sticky
   }
 
   .banner.banner-01 .banner-content {
-    padding-left: 78px;
+    margin: auto;
   }
 
   .banner.banner-01 .banner-content .title {
-    font-size: 80px;
+    font-size: 60px;
   }
 
   .banner.banner-01 .banner-content .banner-info {
@@ -11677,7 +11677,7 @@ body:has(#search.open):before {
 }
 
 .top-bar-text .a {
-  margin-right: 30px;
+  margin-right: 10px;
   color: white !important;
 
 }
@@ -11692,3 +11692,5 @@ body:has(#search.open):before {
     display: none;
   }
 }
+
+.black {color: #000;}
