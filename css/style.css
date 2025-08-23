@@ -7055,7 +7055,7 @@ form.fullborder .form-control:focus {
   position: absolute;
   transition: all 0.3s ease-in-out;
   background-repeat: no-repeat;
-  background: url(eea18112f4b71f5b6cbc.svg);
+  background: none;
 }
 
 .testimonial-section-03 .owl-carousel .owl-nav button.owl-prev:after {
@@ -7065,7 +7065,7 @@ form.fullborder .form-control:focus {
   position: absolute;
   transition: all 0.3s ease-in-out;
   background-repeat: no-repeat;
-  background: url(20b544864dc447f9a09a.svg);
+  background: none;
 }
 
 .testimonial-section-03 .owl-carousel .owl-nav button i {
@@ -7101,11 +7101,11 @@ form.fullborder .form-control:focus {
 }
 
 .testimonial-section-03 .owl-carousel .owl-nav button:hover.owl-prev:after {
-  background: url(7648cfc90b76ad75ece0.svg);
+  background: none;
 }
 
 .testimonial-section-03 .owl-carousel .owl-nav button:hover.owl-next:after {
-  background: url(025d5fe7422db0425f9c.svg);
+  background: none;
 }
 
 .testimonial-section-03 .owl-carousel .owl-nav button.owl-prev {
@@ -7589,8 +7589,8 @@ form.fullborder .form-control:focus {
 }
 
 .header .menu-btn2 {
-  width: 200px;
-  font-size: 24px;
+  width: 150px;
+  font-size: 18px;
   height: 65px;
   display: flex;
   margin-left: 15px;
@@ -7665,11 +7665,11 @@ form.fullborder .form-control:focus {
 }
 
 .header .action-group .header-phone-number {
-  padding: 8px 25px;
+  padding: 4px 15px;
   margin-left: 10px !important;
   border: 1px solid #000000;
   /* blue border */
-  font-size: 24px;
+  font-size: 18px;
   line-height: 30px;
   height: 65px;
 }
