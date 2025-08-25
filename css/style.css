@@ -1970,7 +1970,7 @@ section:has(.rounded-section) {
   line-height: 24px;
   color: #0d1615;
   padding: 17px 45px;
-  border-radius: 50px;
+  border-radius: 10px;
   transition: all 0.3s ease-in-out;
   position: relative;
   background-color: #4b9ad6;
@@ -10867,18 +10867,29 @@ body:has(#search.open):before {
 
 .blog-post.blog-style-03 .blog-post-info {
   margin-top: 20px;
+  padding: 15px;
+  mi
 }
 
 .blog-post.blog-style-03 .blog-post-info .post-title {
-  font-size: 22px;
-  line-height: 34px;
+  font-size: 38px;
+  line-height: 42px;
+  font-weight: 400;
   margin: 0;
-  margin-bottom: 5px;
+  margin-bottom: 25px;
+  min-height: 100px;
 }
 
-.blog-post.blog-style-03 .blog-post-info .post-title a {
-  color: #0d1615;
+.blog-post.blog-style-03 .blog-post-info .post-intro {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 300;
+  margin: 0;
+  margin-bottom: 25px;
+  min-height: 200px;
 }
+
+
 
 .blog-post.blog-style-03 .blog-post-info .post-title a:hover {
   color: #4b9ad6;
