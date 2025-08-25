@@ -3169,15 +3169,17 @@ form.fullborder .form-control:focus {
   justify-content: space-between;
 }
 
-.infobox .infobox-info .infobox-title {
-  font-size: 24px;
-  line-height: 36px;
-  font-weight: 500;
+.infobox .infobox-info .infobox-title a {
+  text-align: center;
+  font-size: 18px;
+  line-height: 16px;
+  font-weight: 300;
+  text-decoration: underline;
   color: #0d1615;
 }
 
 .infobox .infobox-info .infobox-link {
-  line-height: 36px;
+  line-height: 16px;
   align-self: flex-start;
 }
 
@@ -3188,6 +3190,30 @@ form.fullborder .form-control:focus {
 .infobox .infobox-content .infobox-description {
   line-height: 30px;
 }
+
+.infobox.infobox-style-02 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* Centers horizontally */
+  text-align: center;       /* Ensures text is centered */
+}
+
+.infobox.infobox-style-02 .infobox-icon {
+  /* padding: 15px; */
+  border-radius: 10px;
+  margin-bottom: 0px;
+  background-color: #eeeeee;
+  display: flex;
+  justify-content: center;  /* Centers icon horizontally */
+  align-items: center;      /* Centers icon vertically */
+  width: 50px;              /* Optional fixed size for icon area */
+  height: 50px;             /* Optional fixed size for icon area */
+}
+
+.infobox.infobox-style-02 .infobox-content h5 {
+  margin: 0;
+}
+
 
 .infobox.infobox-style-02 .infobox-api img {
   max-width: 100%;
@@ -3201,7 +3227,9 @@ form.fullborder .form-control:focus {
 }
 
 .infobox.infobox-style-02 .infobox-icon {
+  text-align: center;
   display: inline-block;
+  margin: auto;
   padding: 15px;
   border-radius: 10px;
   margin-bottom: 20px;
@@ -8755,7 +8783,7 @@ header.header.header-sticky.is-sticky.header-02 .navbar .navbar-brand img.sticky
 }
 
 .slider-01 .swiper-slide {
-  height: 60vh;
+  height: 50vh;
   position: relative;
   z-index: 2;
 }
@@ -8801,6 +8829,7 @@ header.header.header-sticky.is-sticky.header-02 .navbar .navbar-brand img.sticky
 }
 
 .slider-01 .swiper-slide .hero-item-content .item-description .description {
+  max-width: 400px;
   font-size: 18px;
   line-height: 32px;
   color: #ffffff;
@@ -10497,8 +10526,8 @@ body:has(#search.open):before {
 
 .blog-post {
   border: 1px solid #ddd; /* Light gray border */
-  border-radius: 8px;     /* Rounded corners */
-  padding: 16px;          /* Space inside the card */
+  border-radius: 1px;     /* Rounded corners */
+ 
   background-color: #fff; /* White background */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -10519,6 +10548,7 @@ body:has(#search.open):before {
 
 .blog-post .blog-post-info {
   margin-top: 20px;
+  padding: 16px;
 }
 
 .blog-post .blog-post-info .post-title {
@@ -10780,9 +10810,9 @@ body:has(#search.open):before {
   transition: all 0.3s ease-in-out;
 }
 
-.blog-post.blog-style-02:hover .blog-post-img img {
+/* .blog-post.blog-style-02:hover .blog-post-img img {
   transform: scale(1.3);
-}
+} */
 
 .blog-post.blog-style-02:hover .blog-post-img .blog-post-info .post-description {
   opacity: 1;
@@ -10795,7 +10825,7 @@ body:has(#search.open):before {
   margin-bottom: 0px;
 }
 
-.blog-post.blog-style-03 .blog-post-img img {
+/* .blog-post.blog-style-03 .blog-post-img img {
   transform: scale(1);
   -webkit-transition-duration: .8s;
   transition-duration: .8s;
@@ -10805,7 +10835,7 @@ body:has(#search.open):before {
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   -o-transform: scale(1);
-}
+} */
 
 .blog-post.blog-style-03 .blog-post-img .blog-post-category .post-meta-category {
   position: absolute;
@@ -10827,13 +10857,13 @@ body:has(#search.open):before {
   content: none;
 }
 
-.blog-post.blog-style-03 .blog-post-img:hover img {
+/* .blog-post.blog-style-03 .blog-post-img:hover img {
   transform: scale(1.15);
   -webkit-transform: scale(1.15);
   -moz-transform: scale(1.15);
   -ms-transform: scale(1.15);
   -o-transform: scale(1.15);
-}
+} */
 
 .blog-post.blog-style-03 .blog-post-info {
   margin-top: 20px;
