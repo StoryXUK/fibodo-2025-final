@@ -4582,11 +4582,11 @@ form.fullborder .form-control:focus {
 }
 
 .portfolio-item:hover .portfolio-img img {
-  transform: scale(1.15);
-  -webkit-transform: scale(1.15);
-  -moz-transform: scale(1.15);
-  -ms-transform: scale(1.15);
-  -o-transform: scale(1.15);
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
 }
 
 .portfolio-item.portfolio-item-style01 .portfolio-img .portfolio-img-1 {
@@ -10868,7 +10868,7 @@ body:has(#search.open):before {
 .blog-post.blog-style-03 .blog-post-info {
   margin-top: 20px;
   padding: 15px;
-  mi
+  
 }
 
 .blog-post.blog-style-03 .blog-post-info .post-title {
@@ -11755,5 +11755,10 @@ body:has(#search.open):before {
 
 
 
-.menu-widget .menu-item.is-active a { font-weight: 700; }
+
 .service-single[hidden] { display: none !important; } /* hide inactive panels */
+
+
+.product-description {
+  color: white;
+}
