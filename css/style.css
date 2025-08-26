@@ -7633,6 +7633,12 @@ form.fullborder .form-control:focus {
   border: #000000;
 }
 
+@media (max-width: 991px) {
+  .header .menu-btn2 {
+    display: none !important;
+  }
+}
+
 
 
 .header .menu-btn2 a {
@@ -7665,6 +7671,12 @@ form.fullborder .form-control:focus {
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
   border: 1px solid #000000;
+}
+
+@media (max-width: 991px) {
+  .header .menu-btn3 {
+    display: none !important;
+  }
 }
 
 .header .menu-btn3 a {
@@ -11811,4 +11823,10 @@ body:has(#search.open):before {
 
 .product-description {
   color: white;
+}
+
+@media (max-width: 991px) {
+  .product-description {
+    font-size: 14px;
+  }
 }
