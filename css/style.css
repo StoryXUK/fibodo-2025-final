@@ -11752,3 +11752,8 @@ body:has(#search.open):before {
 }
 
 .black {color: #000;}
+
+
+
+.menu-widget .menu-item.is-active a { font-weight: 700; }
+.service-single[hidden] { display: none !important; } /* hide inactive panels */

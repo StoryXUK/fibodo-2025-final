@@ -736,3 +736,81 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const menu = document.querySelector('.menu-widget .menu-widget-items');
+  if (!menu) return;
+
+  const links = Array.from(menu.querySelectorAll('a[role="tab"]'));
+  const panels = Array.from(document.querySelectorAll('.service-single[role="tabpanel"]'));
+
+  function getIdFromHref(href) {
+    try {
+      const url = new URL(href, window.location.href);
+      return url.hash.replace('#','');
+    } catch {
+      return href.startsWith('#') ? href.slice(1) : href;
+    }
+  }
+
+  function activateTab(id, pushHash = true) {
+    // panels
+    panels.forEach(panel => {
+      if (panel.id === id) {
+        panel.removeAttribute('hidden');
+      } else {
+        panel.setAttribute('hidden', '');
+      }
+    });
+
+    // menu active state + ARIA
+    links.forEach(link => {
+      const li = link.closest('.menu-item');
+      const isActive = getIdFromHref(link.getAttribute('href')) === id;
+      link.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      li && li.classList.toggle('is-active', isActive);
+    });
+
+    // update hash (optional)
+    if (pushHash) {
+      const newHash = '#' + id;
+      if (window.location.hash !== newHash) {
+        history.replaceState(null, '', newHash);
+      }
+    }
+  }
+
+  // Click handling (event delegation)
+  menu.addEventListener('click', function (e) {
+    const a = e.target.closest('a[role="tab"]');
+    if (!a) return;
+    e.preventDefault();
+    const id = getIdFromHref(a.getAttribute('href'));
+    if (!id) return;
+
+    // If the panel exists, activate; otherwise allow normal navigation
+    const targetPanel = document.getElementById(id);
+    if (targetPanel) {
+      activateTab(id, true);
+      // Optional: scroll the panel into view on mobile
+      // targetPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      window.location.href = a.href;
+    }
+  });
+
+  // Initialise: hash or first tab
+  const initialId = window.location.hash ? window.location.hash.slice(1) : getIdFromHref(links[0]?.getAttribute('href') || '');
+  const exists = panels.some(p => p.id === initialId);
+  activateTab(exists ? initialId : panels[0]?.id, false);
+
+  // React to hash changes (e.g., external links)
+  window.addEventListener('hashchange', () => {
+    const id = window.location.hash.slice(1);
+    if (panels.some(p => p.id === id)) activateTab(id, false);
+  });
+});
+
+
