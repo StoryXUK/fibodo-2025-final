@@ -7608,6 +7608,7 @@ form.fullborder .form-control:focus {
 .header .menu-btn {
   width: 65px;
   height: 65px;
+  border-radius: 5px;
   display: flex;
   margin-left: 15px;
   align-items: center;
@@ -7619,6 +7620,7 @@ form.fullborder .form-control:focus {
 .header .menu-btn2 {
   width: 150px;
   font-size: 18px;
+  border-radius: 5px;
   height: 65px;
   display: flex;
   margin-left: 15px;
@@ -7631,20 +7633,56 @@ form.fullborder .form-control:focus {
   border: #000000;
 }
 
-.header .menu-btn2 a {
-  color: white;
-}
 
-.header .menu-btn2 a:hover {
-  color: black;
+
+.header .menu-btn2 a {
+  display: inline-block;        /* makes the anchor fill nicely */
+  color: white;
+  padding: 10px 20px;           /* adjust spacing as needed */
+  text-decoration: none;
 }
 
 .header .menu-btn2:hover {
-  background-color: #fff;
-  color: #000;
-  /* optional: change text to black on white background */
+  background-color: white;
+  border: 1px solid #000;
+}
+
+.header .menu-btn2:hover a {
+  color: black;                 /* text changes when parent is hovered */
+}
+
+.header .menu-btn3 {
+  width: 150px;
+  font-size: 18px;
+  border-radius: 5px;
+  height: 65px;
+  display: flex;
+  margin-left: 15px;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;  /* start white */
+  color: black !important;    /* text black */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
   border: 1px solid #000000;
 }
+
+.header .menu-btn3 a {
+  display: inline-block;
+  color: black;              /* text black */
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.header .menu-btn3:hover {
+  background-color: #000000; /* invert background */
+  border: 1px solid #000;
+}
+
+.header .menu-btn3:hover a {
+  color: white;              /* text turns white */
+}
+
 
 .header .menu-btn svg rect {
   fill: #000000;
@@ -11740,9 +11778,21 @@ body:has(#search.open):before {
 
 }
 
-.top-bar .top-bar-text,
-.top-bar .top-bar-text a {
+.top-bar .top-bar-text {
   color: white !important;
+  font-weight: 200;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.top-bar .top-bar-text i {
+  transition: transform 0.3s ease;
+}
+
+.top-bar .top-bar-text:hover i {
+  transform: translateX(5px); /* move arrow to the right */
 }
 
 @media (max-width: 992px) {
