@@ -738,79 +738,147 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// Features Tabs
 
-document.addEventListener('DOMContentLoaded', function () {
-  const menu = document.querySelector('.menu-widget .menu-widget-items');
-  if (!menu) return;
+document.addEventListener('DOMContentLoaded', () => {
+  // ================================
+  // 1) MENU WIDGET TABS (LEFT MENU)
+  // ================================
+  (function initMenuWidgetTabs() {
+    const menu = document.querySelector('.menu-widget .menu-widget-items');
+    if (!menu) return;
 
-  const links = Array.from(menu.querySelectorAll('a[role="tab"]'));
-  const panels = Array.from(document.querySelectorAll('.service-single[role="tabpanel"]'));
+    const links  = Array.from(menu.querySelectorAll('a[role="tab"]'));
+    const panels = Array.from(document.querySelectorAll('.service-single[role="tabpanel"]'));
+    if (!links.length || !panels.length) return;
 
-  function getIdFromHref(href) {
-    try {
-      const url = new URL(href, window.location.href);
-      return url.hash.replace('#','');
-    } catch {
-      return href.startsWith('#') ? href.slice(1) : href;
-    }
-  }
-
-  function activateTab(id, pushHash = true) {
-    // panels
-    panels.forEach(panel => {
-      if (panel.id === id) {
-        panel.removeAttribute('hidden');
-      } else {
-        panel.setAttribute('hidden', '');
-      }
-    });
-
-    // menu active state + ARIA
-    links.forEach(link => {
-      const li = link.closest('.menu-item');
-      const isActive = getIdFromHref(link.getAttribute('href')) === id;
-      link.setAttribute('aria-selected', isActive ? 'true' : 'false');
-      li && li.classList.toggle('is-active', isActive);
-    });
-
-    // update hash (optional)
-    if (pushHash) {
-      const newHash = '#' + id;
-      if (window.location.hash !== newHash) {
-        history.replaceState(null, '', newHash);
+    function getIdFromHref(href) {
+      try {
+        const url = new URL(href, window.location.href);
+        return url.hash.replace('#', '');
+      } catch {
+        return href.startsWith('#') ? href.slice(1) : href;
       }
     }
-  }
 
-  // Click handling (event delegation)
-  menu.addEventListener('click', function (e) {
-    const a = e.target.closest('a[role="tab"]');
-    if (!a) return;
-    e.preventDefault();
-    const id = getIdFromHref(a.getAttribute('href'));
-    if (!id) return;
+    function activateTab(id, pushHash = true) {
+      // Panels: toggle [hidden]
+      panels.forEach(panel => {
+        if (panel.id === id) {
+          panel.removeAttribute('hidden');
+        } else {
+          panel.setAttribute('hidden', '');
+        }
+      });
 
-    // If the panel exists, activate; otherwise allow normal navigation
-    const targetPanel = document.getElementById(id);
-    if (targetPanel) {
-      activateTab(id, true);
-      // Optional: scroll the panel into view on mobile
-      // targetPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else {
-      window.location.href = a.href;
+      // Menu links: ARIA + .is-active
+      links.forEach(link => {
+        const li = link.closest('.menu-item');
+        const isActive = getIdFromHref(link.getAttribute('href')) === id;
+        link.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        if (li) li.classList.toggle('is-active', isActive);
+      });
+
+      // URL hash (no page jump)
+      if (pushHash) {
+        const newHash = '#' + id;
+        if (window.location.hash !== newHash) {
+          history.replaceState(null, '', newHash);
+        }
+      }
     }
-  });
 
-  // Initialise: hash or first tab
-  const initialId = window.location.hash ? window.location.hash.slice(1) : getIdFromHref(links[0]?.getAttribute('href') || '');
-  const exists = panels.some(p => p.id === initialId);
-  activateTab(exists ? initialId : panels[0]?.id, false);
+    // Click handling (event delegation)
+    menu.addEventListener('click', (e) => {
+      const a = e.target.closest('a[role="tab"]');
+      if (!a) return;
+      const id = getIdFromHref(a.getAttribute('href'));
+      if (!id) return;
 
-  // React to hash changes (e.g., external links)
-  window.addEventListener('hashchange', () => {
-    const id = window.location.hash.slice(1);
-    if (panels.some(p => p.id === id)) activateTab(id, false);
-  });
+      const targetPanel = document.getElementById(id);
+      if (targetPanel) {
+        e.preventDefault();
+        activateTab(id, true);
+        // Optional scroll on mobile:
+        // targetPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      // else allow normal navigation
+    });
+
+    // Initialise from hash or first link
+    const initialIdFromLink = getIdFromHref(links[0]?.getAttribute('href') || '');
+    const initialHash = window.location.hash ? window.location.hash.slice(1) : '';
+    const startId = panels.some(p => p.id === initialHash) ? initialHash
+                  : (panels.some(p => p.id === initialIdFromLink) ? initialIdFromLink
+                  : panels[0].id);
+    activateTab(startId, false);
+
+    // Respond to external hash changes
+    window.addEventListener('hashchange', () => {
+      const id = window.location.hash.slice(1);
+      if (panels.some(p => p.id === id)) activateTab(id, false);
+    });
+  })();
+
+
+  // ==========================================
+  // 2) AUTO-ROTATING .radio-switch NAV TABS
+  // ==========================================
+  (function initAutoRotatingTabs() {
+    const tabs = document.querySelectorAll('.radio-switch .nav-link');
+    if (!tabs.length) return;
+
+    let currentIndex = 0;
+    let rotationId = null;
+
+    function activateSwitchTab(index) {
+      tabs.forEach((tab, i) => {
+        const isActive = i === index;
+        tab.classList.toggle('active', isActive);
+        tab.setAttribute('aria-selected', isActive);
+        tab.classList.toggle('show', isActive);
+
+        const targetId = tab.getAttribute('data-bs-target'); // e.g. "#pane-1"
+        const pane = targetId ? document.querySelector(targetId) : null;
+        if (pane) {
+          pane.classList.toggle('active', isActive);
+          pane.classList.toggle('show', isActive);
+        }
+      });
+    }
+
+    function startRotation() {
+      stopRotation();
+      rotationId = setInterval(() => {
+        currentIndex = (currentIndex + 1) % tabs.length;
+        activateSwitchTab(currentIndex);
+      }, 3000);
+    }
+
+    function stopRotation() {
+      if (rotationId) {
+        clearInterval(rotationId);
+        rotationId = null;
+      }
+    }
+
+    // Hover pause on parent section
+    const section = document.querySelector('.switch-content-tabs');
+    if (section) {
+      section.addEventListener('mouseenter', stopRotation);
+      section.addEventListener('mouseleave', startRotation);
+    }
+
+    // Click to jump immediately
+    tabs.forEach((tab, i) => {
+      tab.addEventListener('click', () => {
+        currentIndex = i;
+        activateSwitchTab(currentIndex);
+      });
+    });
+
+    // Initial activate + start
+    activateSwitchTab(currentIndex);
+    startRotation();
+  })();
 });
-
-

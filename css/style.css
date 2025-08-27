@@ -8802,6 +8802,7 @@ header.header.header-sticky.is-sticky.header-02 .navbar .navbar-brand img.sticky
 
 .banner.banner-01 .banner-content .title.title-main {
   margin: auto;
+ 
 }
 
 .banner.banner-01 .banner-content .banner-info {
@@ -8812,6 +8813,7 @@ header.header.header-sticky.is-sticky.header-02 .navbar .navbar-brand img.sticky
   font-size: 28px;
   font-weight: 400;
   line-height: 34px;
+  max-width: 60vw;
 }
 
 .banner.banner-01 .banner-content .banner-info .banner-reviews {
@@ -11828,5 +11830,18 @@ body:has(#search.open):before {
 @media (max-width: 991px) {
   .product-description {
     font-size: 14px;
+  }
+}
+
+
+.max-width60 {
+  max-width: 60vw;
+  margin: auto;
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .max-width60 {
+    max-width: 90vw;
   }
 }
