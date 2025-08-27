@@ -922,4 +922,4 @@ const element = document.getElementById("swap-word");
   }
 
   // start after delay
-  setTimeout(deleteEffect, 1000);
+  setTimeout(deleteEffect, 1200);
