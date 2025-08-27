@@ -882,3 +882,15 @@ document.addEventListener('DOMContentLoaded', () => {
     startRotation();
   })();
 });
+
+
+
+
+
+  // Remove preloader once page has loaded
+  window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+    setTimeout(() => {
+      preloader.classList.add("fade-out");
+    }, 2000); // show for ~2 seconds
+  });
