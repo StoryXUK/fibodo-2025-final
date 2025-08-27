@@ -568,31 +568,7 @@
   var min = Math.min;
   var round = Math.round;
 
-  // of the `<html>` and `<body>
-
-
-  <!-- Preloader -->
-    <div id="preloader">
-        <div class="preloader-content">
-            <h1 class="title title-main">Everything You Need</h1>
-            <h1 class="title">
-                <span>To </span><span id="swap-word">Run</span><span> Your Business.</span>
-            </h1>
-            <div class="banner-info max-width60"></div>
-        </div>
-    </div>
-
-
-  <!-- Preloader -->
-    <div id="preloader">
-        <div class="preloader-content">
-            <h1 class="title title-main">Everything You Need</h1>
-            <h1 class="title">
-                <span>To </span><span id="swap-word">Run</span><span> Your Business.</span>
-            </h1>
-            <div class="banner-info max-width60"></div>
-        </div>
-    </div>` rect bounds if horizontally scrollable
+  // of the `<html>` and `<body>` rect bounds if horizontally scrollable
 
   function getDocumentRect(element) {
     var _element$ownerDocumen;

@@ -892,7 +892,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const preloader = document.getElementById("preloader");
     setTimeout(() => {
       preloader.classList.add("fade-out");
-    }, 2000); // show for ~2 seconds
+    }, 2300); // show for ~2 seconds
   });
 
 const element = document.getElementById("swap-word");
@@ -922,4 +922,4 @@ const element = document.getElementById("swap-word");
   }
 
   // start after delay
-  setTimeout(deleteEffect, 500);
+  setTimeout(deleteEffect, 1000);
