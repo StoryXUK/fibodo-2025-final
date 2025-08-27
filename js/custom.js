@@ -894,3 +894,32 @@ document.addEventListener('DOMContentLoaded', () => {
       preloader.classList.add("fade-out");
     }, 2000); // show for ~2 seconds
   });
+
+const element = document.getElementById("swap-word");
+  const deleteWord = "Run";
+  const newWord = "Grow";
+  let i = deleteWord.length;
+
+  // delete letters one by one
+  function deleteEffect() {
+    if (i >= 0) {
+      element.textContent = deleteWord.substring(0, i);
+      i--;
+      setTimeout(deleteEffect, 100); // speed of deletion
+    } else {
+      typeEffect();
+    }
+  }
+
+  // type new letters one by one
+  let j = 0;
+  function typeEffect() {
+    if (j <= newWord.length) {
+      element.textContent = newWord.substring(0, j);
+      j++;
+      setTimeout(typeEffect, 100); // speed of typing
+    }
+  }
+
+  // start after delay
+  setTimeout(deleteEffect, 1000);
