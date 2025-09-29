@@ -11902,3 +11902,16 @@ body:has(#search.open):before {
 .bold {
   font-weight: 600;
 }
+
+
+.restricted-width {
+  width: 70%;
+  margin: 0 auto;          /* centers the container */
+}
+
+/* Mobile devices (≤768px) */
+@media (max-width: 768px) {
+  .restricted-width {
+    width: 95%;
+  }
+}
