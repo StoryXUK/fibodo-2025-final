@@ -316,6 +316,42 @@
             line-height: 1.7;
             max-width: 640px;
         }
+
+        /* ── Form feedback ── */
+        .gs-form-feedback {
+            display: none;
+            margin-top: 0.85rem;
+            padding: 0.75rem 1rem;
+            border-radius: 6px;
+            font-size: 0.88rem;
+            line-height: 1.5;
+        }
+        .gs-form-feedback.is-success {
+            display: block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            border: 1px solid #a5d6a7;
+        }
+        .gs-form-feedback.is-error {
+            display: block;
+            background: #fdecea;
+            color: #c62828;
+            border: 1px solid #ef9a9a;
+        }
+        .gs-final-cta .gs-form-feedback.is-success {
+            background: rgba(46,125,50,0.2);
+            border-color: rgba(165,214,167,0.4);
+            color: #a5d6a7;
+        }
+        .gs-final-cta .gs-form-feedback.is-error {
+            background: rgba(198,40,40,0.2);
+            border-color: rgba(239,154,154,0.4);
+            color: #ef9a9a;
+        }
+        .gs-hero-form .btn:disabled {
+            opacity: 0.65;
+            cursor: not-allowed;
+        }
     </style>
 </head>
 
@@ -352,12 +388,12 @@
                         <div class="col-lg-5 offset-lg-1" id="demo-form">
                             <div class="gs-hero-form">
                                 <p class="form-title">Book a GALAXY demo</p>
-                                <form class="contact-form">
-                                    <input type="text" class="form-control" placeholder="Name *" aria-label="Name" required>
-                                    <input type="text" class="form-control" placeholder="Business name *" aria-label="Business name" required>
-                                    <input type="email" class="form-control" placeholder="Email *" aria-label="Email" required>
-                                    <input type="tel" class="form-control" placeholder="Phone *" aria-label="Phone" required>
-                                    <select class="form-control" aria-label="Business type" required>
+                                <form class="contact-form gs-enquiry-form" id="gs-form-hero" novalidate>
+                                    <input type="text" name="name" class="form-control" placeholder="Name *" aria-label="Name" required>
+                                    <input type="text" name="business_name" class="form-control" placeholder="Business name *" aria-label="Business name" required>
+                                    <input type="email" name="email" class="form-control" placeholder="Email *" aria-label="Email" required>
+                                    <input type="tel" name="phone" class="form-control" placeholder="Phone *" aria-label="Phone" required>
+                                    <select name="business_type" class="form-control" aria-label="Business type" required>
                                         <option value="" disabled selected>Business type *</option>
                                         <option>Independent gym</option>
                                         <option>Fitness studio</option>
@@ -368,8 +404,9 @@
                                         <option>Swimming club</option>
                                         <option>Other</option>
                                     </select>
-                                    <textarea class="form-control" placeholder="Tell us about your business (optional)" rows="3" aria-label="Message"></textarea>
+                                    <textarea name="message" class="form-control" placeholder="Tell us about your business (optional)" rows="3" aria-label="Message"></textarea>
                                     <button type="submit" class="btn">Book a GALAXY demo</button>
+                                    <div class="gs-form-feedback" role="alert" aria-live="polite"></div>
                                 </form>
                             </div>
                         </div>
@@ -542,12 +579,12 @@
                         <div class="col-lg-5 offset-lg-1">
                             <div class="gs-hero-form">
                                 <p class="form-title">Book a GALAXY demo</p>
-                                <form class="contact-form">
-                                    <input type="text" class="form-control" placeholder="Name *" aria-label="Name" required>
-                                    <input type="text" class="form-control" placeholder="Business name *" aria-label="Business name" required>
-                                    <input type="email" class="form-control" placeholder="Email *" aria-label="Email" required>
-                                    <input type="tel" class="form-control" placeholder="Phone *" aria-label="Phone" required>
-                                    <select class="form-control" aria-label="Business type" required>
+                                <form class="contact-form gs-enquiry-form" id="gs-form-cta" novalidate>
+                                    <input type="text" name="name" class="form-control" placeholder="Name *" aria-label="Name" required>
+                                    <input type="text" name="business_name" class="form-control" placeholder="Business name *" aria-label="Business name" required>
+                                    <input type="email" name="email" class="form-control" placeholder="Email *" aria-label="Email" required>
+                                    <input type="tel" name="phone" class="form-control" placeholder="Phone *" aria-label="Phone" required>
+                                    <select name="business_type" class="form-control" aria-label="Business type" required>
                                         <option value="" disabled selected>Business type *</option>
                                         <option>Independent gym</option>
                                         <option>Fitness studio</option>
@@ -558,8 +595,9 @@
                                         <option>Swimming club</option>
                                         <option>Other</option>
                                     </select>
-                                    <textarea class="form-control" placeholder="Tell us about your business (optional)" rows="3" aria-label="Message"></textarea>
+                                    <textarea name="message" class="form-control" placeholder="Tell us about your business (optional)" rows="3" aria-label="Message"></textarea>
                                     <button type="submit" class="btn">Book a GALAXY demo</button>
+                                    <div class="gs-form-feedback" role="alert" aria-live="polite"></div>
                                 </form>
                             </div>
                         </div>
@@ -608,6 +646,56 @@
         document.querySelector('a[href="#demo-form"]')?.addEventListener('click', function(e) {
             e.preventDefault();
             document.getElementById('demo-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+
+        // GALAXY demo enquiry — AJAX form handler
+        document.querySelectorAll('.gs-enquiry-form').forEach(function(form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                var feedback = form.querySelector('.gs-form-feedback');
+                var btn      = form.querySelector('button[type="submit"]');
+
+                // Clear previous feedback
+                feedback.className = 'gs-form-feedback';
+                feedback.textContent = '';
+
+                // Disable button while submitting
+                btn.disabled = true;
+                var originalText = btn.textContent;
+                btn.textContent = 'Sending…';
+
+                var data = new FormData(form);
+
+                fetch('mail.php', {
+                    method: 'POST',
+                    body: data
+                })
+                .then(function(response) {
+                    return response.json().then(function(json) {
+                        return { ok: response.ok, json: json };
+                    });
+                })
+                .then(function(result) {
+                    if (result.ok && result.json.success) {
+                        feedback.className = 'gs-form-feedback is-success';
+                        feedback.textContent = result.json.message;
+                        form.reset();
+                    } else {
+                        feedback.className = 'gs-form-feedback is-error';
+                        feedback.textContent = result.json.message || 'Something went wrong. Please try again.';
+                    }
+                })
+                .catch(function() {
+                    feedback.className = 'gs-form-feedback is-error';
+                    feedback.textContent = 'Could not send your enquiry. Please email us at contact@fibodo.com.';
+                })
+                .finally(function() {
+                    btn.disabled = false;
+                    btn.textContent = originalText;
+                    feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                });
+            });
         });
     </script>
 </body>
