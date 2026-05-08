@@ -133,17 +133,12 @@
         }
 
         /* ── Section: What GALAXY brings together ── */
-        .gs-features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2.5rem;
-        }
         .gs-feature-card {
             background: #fff;
             border: 1.5px solid #ebebeb;
             border-radius: 10px;
             padding: 1.75rem 1.5rem;
+            height: 100%;
             transition: box-shadow 0.2s, border-color 0.2s;
         }
         .gs-feature-card:hover {
@@ -450,54 +445,66 @@
                         </div>
                     </div>
 
-                    <div class="gs-features-grid">
+                    <div class="row gy-4 mt-2">
 
-                        <div class="gs-feature-card">
-                            <div class="gs-feature-icon">
-                                <i class="bi bi-calendar-check"></i>
+                        <div class="col-md-4">
+                            <div class="gs-feature-card">
+                                <div class="gs-feature-icon">
+                                    <i class="bi bi-calendar-check"></i>
+                                </div>
+                                <h5>Bookings</h5>
+                                <p>Let customers book classes, sessions and services easily.</p>
                             </div>
-                            <h5>Bookings</h5>
-                            <p>Let customers book classes, sessions and services easily.</p>
                         </div>
 
-                        <div class="gs-feature-card">
-                            <div class="gs-feature-icon">
-                                <i class="bi bi-credit-card"></i>
+                        <div class="col-md-4">
+                            <div class="gs-feature-card">
+                                <div class="gs-feature-icon">
+                                    <i class="bi bi-credit-card"></i>
+                                </div>
+                                <h5>Payments</h5>
+                                <p>Take secure payments and reduce chasing.</p>
                             </div>
-                            <h5>Payments</h5>
-                            <p>Take secure payments and reduce chasing.</p>
                         </div>
 
-                        <div class="gs-feature-card">
-                            <div class="gs-feature-icon">
-                                <i class="bi bi-person-badge"></i>
+                        <div class="col-md-4">
+                            <div class="gs-feature-card">
+                                <div class="gs-feature-icon">
+                                    <i class="bi bi-person-badge"></i>
+                                </div>
+                                <h5>Memberships</h5>
+                                <p>Manage members, packages and recurring revenue.</p>
                             </div>
-                            <h5>Memberships</h5>
-                            <p>Manage members, packages and recurring revenue.</p>
                         </div>
 
-                        <div class="gs-feature-card">
-                            <div class="gs-feature-icon">
-                                <i class="bi bi-people"></i>
+                        <div class="col-md-4">
+                            <div class="gs-feature-card">
+                                <div class="gs-feature-icon">
+                                    <i class="bi bi-people"></i>
+                                </div>
+                                <h5>Staff</h5>
+                                <p>Keep your team organised and your timetable covered.</p>
                             </div>
-                            <h5>Staff</h5>
-                            <p>Keep your team organised and your timetable covered.</p>
                         </div>
 
-                        <div class="gs-feature-card">
-                            <div class="gs-feature-icon">
-                                <i class="bi bi-grid-1x2"></i>
+                        <div class="col-md-4">
+                            <div class="gs-feature-card">
+                                <div class="gs-feature-icon">
+                                    <i class="bi bi-grid-1x2"></i>
+                                </div>
+                                <h5>Scheduling</h5>
+                                <p>Run classes, spaces, courses and events from one planner.</p>
                             </div>
-                            <h5>Scheduling</h5>
-                            <p>Run classes, spaces, courses and events from one planner.</p>
                         </div>
 
-                        <div class="gs-feature-card">
-                            <div class="gs-feature-icon">
-                                <i class="bi bi-person-lines-fill"></i>
+                        <div class="col-md-4">
+                            <div class="gs-feature-card">
+                                <div class="gs-feature-icon">
+                                    <i class="bi bi-person-lines-fill"></i>
+                                </div>
+                                <h5>Customer management</h5>
+                                <p>Understand customers and keep them engaged.</p>
                             </div>
-                            <h5>Customer management</h5>
-                            <p>Understand customers and keep them engaged.</p>
                         </div>
 
                     </div>
@@ -649,53 +656,56 @@
         });
 
         // GALAXY demo enquiry — AJAX form handler
-        document.querySelectorAll('.gs-enquiry-form').forEach(function(form) {
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
+        // Uses capture phase so it fires before custom.js's jQuery bubble-phase
+        // handler that calls preventDefault() on all forms (demo guard).
+        function gsHandleSubmit(e) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
 
-                var feedback = form.querySelector('.gs-form-feedback');
-                var btn      = form.querySelector('button[type="submit"]');
+            var form     = e.currentTarget;
+            var feedback = form.querySelector('.gs-form-feedback');
+            var btn      = form.querySelector('button[type="submit"]');
 
-                // Clear previous feedback
-                feedback.className = 'gs-form-feedback';
-                feedback.textContent = '';
+            feedback.className   = 'gs-form-feedback';
+            feedback.textContent = '';
 
-                // Disable button while submitting
-                btn.disabled = true;
-                var originalText = btn.textContent;
-                btn.textContent = 'Sending…';
+            btn.disabled    = true;
+            var originalText = btn.textContent;
+            btn.textContent  = 'Sending\u2026';
 
-                var data = new FormData(form);
-
-                fetch('mail.php', {
-                    method: 'POST',
-                    body: data
-                })
-                .then(function(response) {
-                    return response.json().then(function(json) {
-                        return { ok: response.ok, json: json };
-                    });
-                })
-                .then(function(result) {
-                    if (result.ok && result.json.success) {
-                        feedback.className = 'gs-form-feedback is-success';
-                        feedback.textContent = result.json.message;
-                        form.reset();
-                    } else {
-                        feedback.className = 'gs-form-feedback is-error';
-                        feedback.textContent = result.json.message || 'Something went wrong. Please try again.';
-                    }
-                })
-                .catch(function() {
-                    feedback.className = 'gs-form-feedback is-error';
-                    feedback.textContent = 'Could not send your enquiry. Please email us at contact@fibodo.com.';
-                })
-                .finally(function() {
-                    btn.disabled = false;
-                    btn.textContent = originalText;
-                    feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            fetch('mail.php', {
+                method: 'POST',
+                body: new FormData(form)
+            })
+            .then(function(response) {
+                return response.json().then(function(json) {
+                    return { ok: response.ok, json: json };
                 });
+            })
+            .then(function(result) {
+                if (result.ok && result.json.success) {
+                    feedback.className   = 'gs-form-feedback is-success';
+                    feedback.textContent = result.json.message;
+                    form.reset();
+                } else {
+                    feedback.className   = 'gs-form-feedback is-error';
+                    feedback.textContent = result.json.message || 'Something went wrong. Please try again.';
+                }
+            })
+            .catch(function() {
+                feedback.className   = 'gs-form-feedback is-error';
+                feedback.textContent = 'Could not send your enquiry. Please email us at contact@fibodo.com.';
+            })
+            .finally(function() {
+                btn.disabled    = false;
+                btn.textContent = originalText;
+                feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             });
+        }
+
+        // Attach in capture phase — runs before jQuery's bubble-phase handlers
+        document.querySelectorAll('.gs-enquiry-form').forEach(function(form) {
+            form.addEventListener('submit', gsHandleSubmit, true);
         });
     </script>
 </body>

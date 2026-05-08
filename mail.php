@@ -60,7 +60,7 @@ if (!empty($errors)) {
 
 // ── Build email ───────────────────────────────────────────────────────────────
 
-$to      = 'jake.shand@fibodo.com';
+$to      = 'jake.shand@fibodo.com, james.murphy@fibodo.com';
 $subject = 'GALAXY demo enquiry — ' . $business_name;
 
 $body  = "A new GALAXY demo enquiry has been submitted via goodsystems.html.\n\n";
