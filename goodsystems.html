@@ -182,6 +182,20 @@
         }
 
         /* ── Section: Product family ── */
+        .gs-product-link {
+            display: block;
+            height: 100%;
+            text-decoration: none;
+            color: inherit;
+        }
+        .gs-product-link:hover .gs-product-card {
+            box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+            border-color: #ccc;
+        }
+        .gs-product-link:hover h4 {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
         .gs-products {
             background: #f7f7f5;
         }
@@ -530,11 +544,13 @@
                     <div class="row gy-4">
 
                         <div class="col-md-6 col-xl-3">
-                            <div class="gs-product-card">
-                                <span class="gs-product-label">CORE</span>
-                                <h4>CORE by fibodo</h4>
-                                <p>For self-employed coaches, PTs and instructors who want control of their own business. Manage bookings, payments, clients and scheduling in one simple platform.</p>
-                            </div>
+                            <a href="https://core.fibodo.com/" target="_blank" rel="noopener noreferrer" class="gs-product-link">
+                                <div class="gs-product-card">
+                                    <span class="gs-product-label">CORE</span>
+                                    <h4>CORE by fibodo</h4>
+                                    <p>For self-employed coaches, PTs and instructors who want control of their own business. Manage bookings, payments, clients and scheduling in one simple platform.</p>
+                                </div>
+                            </a>
                         </div>
 
                         <div class="col-md-6 col-xl-3">
@@ -546,19 +562,23 @@
                         </div>
 
                         <div class="col-md-6 col-xl-3">
-                            <div class="gs-product-card">
-                                <span class="gs-product-label">PULSAR</span>
-                                <h4>PULSAR by fibodo</h4>
-                                <p>For businesses that want to deliver live, on-demand or digital content alongside their physical services. Create, manage and monetise video sessions, courses, replays and member content through a connected platform.</p>
-                            </div>
+                            <a href="https://pulsar.fibodo.com/" target="_blank" rel="noopener noreferrer" class="gs-product-link">
+                                <div class="gs-product-card">
+                                    <span class="gs-product-label">PULSAR</span>
+                                    <h4>PULSAR by fibodo</h4>
+                                    <p>For businesses that want to deliver live, on-demand or digital content alongside their physical services. Create, manage and monetise video sessions, courses, replays and member content through a connected platform.</p>
+                                </div>
+                            </a>
                         </div>
 
                         <div class="col-md-6 col-xl-3">
-                            <div class="gs-product-card">
-                                <span class="gs-product-label">ENTERPRISE</span>
-                                <h4>ENTERPRISE by fibodo</h4>
-                                <p>For local authority leisure centres and multisite operators that need a bespoke system built around their requirements. Designed for complex operations, multiple locations, integrations and tailored customer journeys.</p>
-                            </div>
+                            <a href="https://enterprise.fibodo.com/" target="_blank" rel="noopener noreferrer" class="gs-product-link">
+                                <div class="gs-product-card">
+                                    <span class="gs-product-label">ENTERPRISE</span>
+                                    <h4>ENTERPRISE by fibodo</h4>
+                                    <p>For local authority leisure centres and multisite operators that need a bespoke system built around their requirements. Designed for complex operations, multiple locations, integrations and tailored customer journeys.</p>
+                                </div>
+                            </a>
                         </div>
 
                     </div>
