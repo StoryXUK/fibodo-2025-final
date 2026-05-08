@@ -656,8 +656,8 @@
         });
 
         // GALAXY demo enquiry — AJAX form handler
-        // Uses capture phase so it fires before custom.js's jQuery bubble-phase
-        // handler that calls preventDefault() on all forms (demo guard).
+        // Registered in capture phase so it fires before custom.js's jQuery
+        // bubble-phase handler that calls preventDefault() on all forms.
         function gsHandleSubmit(e) {
             e.preventDefault();
             e.stopImmediatePropagation();
@@ -666,14 +666,17 @@
             var feedback = form.querySelector('.gs-form-feedback');
             var btn      = form.querySelector('button[type="submit"]');
 
+            // Each form posts to its own PHP file
+            var endpoint = form.id === 'gs-form-hero' ? 'mail-hero.php' : 'mail-cta.php';
+
             feedback.className   = 'gs-form-feedback';
             feedback.textContent = '';
 
-            btn.disabled    = true;
+            btn.disabled     = true;
             var originalText = btn.textContent;
             btn.textContent  = 'Sending\u2026';
 
-            fetch('mail.php', {
+            fetch(endpoint, {
                 method: 'POST',
                 body: new FormData(form)
             })
